@@ -10,7 +10,7 @@ O app contém os seguintes módulos
 * E envia messagem de texto para esse E-mail e o número de whatsapp
 
 ## páginas
-![Foto do App](https://github.com/CarlosSTS/CounterAPP/blob/master/gifProject.gif)
+![Foto do App](https://github.com/CarlosSTS/connectApp/blob/master/gifProject.gif)
 
 ## Testando
 RODANDO O PROJETO
