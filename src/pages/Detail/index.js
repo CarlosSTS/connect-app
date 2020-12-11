@@ -10,7 +10,7 @@ import styles from './styles'
 export default function Detail() {
  const route = useRoute();
  const params = route.params
- const message = `Olá ${params.name}, olá, bem-vindo ao Connect`;
+ const message = `Olá ${params.name}, bem-vindo ao Connect`;
 
  function sendMail() {
   MailComposer.composeAsync({
