@@ -10,7 +10,9 @@ O app contém os seguintes módulos
 * E envia messagem de texto para esse E-mail e o número de whatsapp
 
 ## páginas
-![Foto do App](https://github.com/CarlosSTS/connectApp/blob/master/gifProject.gif)
+![Foto do App formulário](https://github.com/CarlosSTS/connectApp/blob/master/assets/form.png)
+![Foto do App dashboard](https://github.com/CarlosSTS/connectApp/blob/master/assets/dashboard.png)
+![Foto do App email](https://github.com/CarlosSTS/connectApp/blob/master/assets/email.png)
 
 ## Testando
 RODANDO O PROJETO
