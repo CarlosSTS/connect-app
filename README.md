@@ -21,8 +21,6 @@ RODANDO O PROJETO
 * yarn android => para executar o projeto no emulador android
 * yarn ios => para executar no emulador iOS
 
-****
-
 ## Feito por
 
 Carlos Ferreira
