@@ -8,6 +8,7 @@ import {
 
 import Routes from "./src/routes";
 import { colors } from "./src/common";
+import { Loading } from "./src/components";
 
 const App = () => {
   let [fontsLoaded] = useFonts({
@@ -16,7 +17,7 @@ const App = () => {
   });
 
   if (!fontsLoaded) {
-    return null;
+    return null
   }
 
   return (
