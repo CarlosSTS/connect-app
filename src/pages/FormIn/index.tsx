@@ -1,22 +1,16 @@
 import React, { useCallback, useRef, useState } from "react";
-import {
-  View,
-  KeyboardAvoidingView,
-  ScrollView,
-  Platform,
-  Alert,
-} from "react-native";
+import { View, KeyboardAvoidingView, ScrollView, Platform } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome5 } from "@expo/vector-icons";
-
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 
+import { colors } from "../../common";
 import { expo } from "../../../app.json";
+
 import { Button, Input, KeyboardVisible } from "../../components";
 import { Container, Title, Version } from "./styles";
-import { colors } from "../../common";
 
 const signInSchema = Yup.object({
   name: Yup.string().required("Nome obrigatório").min(3, "No mínimo 3 dígitos"),
@@ -48,11 +42,7 @@ export default function FormIn() {
   });
 
   const NavigateToDetail = useCallback(
-    ({ name = "", email = "", phone = "" }) => {
-      if (!name || !email || !phone) {
-        Alert.alert("Dados Inválidos", "Verifique seus dados novamente");
-        return;
-      }
+    async ({ name = "", email = "", phone = "" }) => {
       navigation.navigate("Detail", { name, email, phone });
     },
     []
@@ -136,7 +126,7 @@ export default function FormIn() {
                   onChange,
                   // onBlur,
                   value,
-                  ref
+                  ref,
                 },
               }) => (
                 <Input

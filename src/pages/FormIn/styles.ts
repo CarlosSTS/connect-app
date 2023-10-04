@@ -1,6 +1,5 @@
-import styled from 'styled-components/native';
-import {colors, fonts} from '../../common';
-import {Button} from '../../components';
+import styled from "styled-components/native";
+import { colors, fonts } from "../../common";
 
 export const Container = styled.View`
   flex: 1;
@@ -15,19 +14,6 @@ export const Title = styled.Text`
   font-family: ${fonts.Inter_400Regular};
   color: ${colors.black};
   margin: 32px 0 24px;
-`;
-
-export const ForgotPasswordButton = styled(Button).attrs({
-  styleText: {
-    color: colors.primaryColor,
-    fontSize: 16,
-  },
-})`
-  background-color: ${colors.transparent};
-  width: 54%;
-  height: 32px;
-  align-self: flex-end;
-  margin: 0;
 `;
 
 export const Version = styled.Text`

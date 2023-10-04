@@ -17,7 +17,7 @@ const colors = {
   greenLight: '#00C851',
   error: '#F53030',
   primaryColor,
-  primaryColorDark: darken(0.4, primaryColor),
+  primaryColorDark: darken(0.5, primaryColor),
   primaryColorLight: lighten(0.3, primaryColor),
   whiteDark: darken(0.2, white),
   placeholder: '#737380',

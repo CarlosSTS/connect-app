@@ -23,7 +23,7 @@ const App = () => {
   return (
     <>
       <StatusBar
-        barStyle="dark-content"
+        barStyle="light-content"
         backgroundColor={colors.primaryColorDark}
       />
       <Routes />

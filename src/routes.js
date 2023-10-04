@@ -32,10 +32,10 @@ export default function Routes() {
             title: "Connect",
             headerRight: () => (
               <FontAwesome
-                style={{ marginRight: 15 }}
+                style={{ marginRight: 16 }}
                 name="connectdevelop"
                 size={24}
-                color="#fff"
+                color={colors.white}
               />
             ),
           }}
@@ -43,17 +43,17 @@ export default function Routes() {
         <Screen
           name="Detail"
           component={Detail}
-          options={{
-            title: "Detalhe",
+          options={({ route }) => ({
+            title: `Olá ${route.params?.name || 'Detalhes'}`,
             headerRight: () => (
               <MaterialCommunityIcons
-                style={{ marginRight: 15 }}
+                style={{ marginRight: 16 }}
                 name="details"
                 size={24}
-                color="#fff"
+                color={colors.white}
               />
             ),
-          }}
+          })}
         />
       </Navigator>
     </NavigationContainer>

@@ -1,18 +1,19 @@
 import React from "react";
 import { ActivityIndicator, TextProps, ViewProps } from "react-native";
 import { RectButtonProperties } from "react-native-gesture-handler";
-import { MaterialIcons } from "@expo/vector-icons";
+import { FontAwesome5 } from "@expo/vector-icons";
 
 import { colors } from "../../common";
 import { Container, ButtonText } from "./styles";
 
 interface ButtonProps extends RectButtonProperties {
   loading: boolean;
-  icon?: keyof typeof MaterialIcons.glyphMap;
+  icon?: keyof typeof FontAwesome5.glyphMap;
   children: string;
   styleText?: TextProps["style"];
-  styleIcon?: object;
   containerStyle?: ViewProps["style"];
+  iconSize?: number;
+  iconStyle: object;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,8 +21,9 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   children = "",
   styleText = {},
-  styleIcon,
   containerStyle = {},
+  iconSize,
+  iconStyle,
   ...rest
 }) => {
   return (
@@ -40,11 +42,11 @@ const Button: React.FC<ButtonProps> = ({
           />
         ) : (
           icon && (
-            <MaterialIcons
+            <FontAwesome5
               name={icon}
               color={colors.white}
-              size={20}
-              style={{
+              size={iconSize || 20}
+              style={iconStyle || {
                 paddingRight: 16,
               }}
             />
