@@ -10,7 +10,6 @@ interface InputProps extends TextInputProps {
   iconRight?: keyof typeof Entypo.glyphMap;
   iconRightPress?: () => void;
   containerStyle?: ViewProps["style"];
-  mask?: "number" | "phone";
   error: string;
   value: string;
 }
@@ -25,7 +24,6 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
     iconRight,
     containerStyle = {},
     iconRightPress,
-    mask,
     error = "",
     value = "",
     ...rest
@@ -63,6 +61,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
       >
         <Feather name={icon} size={20} color={useColor} />
         <TextInput
+          ref={ref}
           placeholderTextColor={colors.placeholder}
           keyboardAppearance="dark"
           defaultValue={""}

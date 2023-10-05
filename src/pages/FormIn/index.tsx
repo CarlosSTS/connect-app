@@ -1,5 +1,5 @@
 import React, { useCallback, useRef, useState } from "react";
-import { View, KeyboardAvoidingView, ScrollView, Platform } from "react-native";
+import { View, KeyboardAvoidingView, ScrollView, Platform, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Controller, useForm } from "react-hook-form";
@@ -25,8 +25,8 @@ const signInSchema = Yup.object({
 export default function FormIn() {
   const navigation = useNavigation();
   const [loading, setLoading] = useState(false);
-  const emailInputRef = useRef(null);
-  const passwordInputRef = useRef(null);
+  const emailInputRef = useRef<TextInput>(null);
+  const passwordInputRef = useRef<TextInput>(null);
 
   const {
     control,
