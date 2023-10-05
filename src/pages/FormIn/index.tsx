@@ -1,5 +1,11 @@
 import React, { useCallback, useRef, useState } from "react";
-import { View, KeyboardAvoidingView, ScrollView, Platform, TextInput } from "react-native";
+import {
+  View,
+  KeyboardAvoidingView,
+  ScrollView,
+  Platform,
+  TextInput,
+} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { FontAwesome5 } from "@expo/vector-icons";
 import { Controller, useForm } from "react-hook-form";
@@ -13,13 +19,15 @@ import { Button, Input, KeyboardVisible } from "../../components";
 import { Container, Title, Version } from "./styles";
 
 const signInSchema = Yup.object({
-  name: Yup.string().required("Nome obrigatório").min(3, "No mínimo 3 dígitos"),
+  name: Yup.string()
+    .required("Nome obrigatório")
+    .min(3, "No mínimo 3 dígitos"),
   email: Yup.string()
     .required("E-mail obrigatório")
     .email("Digite um e-mail válido"),
   phone: Yup.string()
     .required("Telefone obrigatório")
-    .min(15, "Telefone inválido"),
+    .min(10, "Telefone inválido"),
 });
 
 export default function FormIn() {
@@ -68,13 +76,7 @@ export default function FormIn() {
             <Controller
               control={control}
               name="name"
-              render={({
-                field: {
-                  onChange,
-                  // onBlur,
-                  value,
-                },
-              }) => (
+              render={({ field: { onChange, value } }) => (
                 <Input
                   autoCorrect={true}
                   autoCapitalize="words"
@@ -84,7 +86,6 @@ export default function FormIn() {
                   returnKeyType="next"
                   onSubmitEditing={() => emailInputRef.current?.focus()}
                   editable={!loading}
-                  // onBlur={onBlur}
                   onChangeText={onChange}
                   value={value}
                   error={errors.name?.message}
@@ -94,13 +95,7 @@ export default function FormIn() {
             <Controller
               control={control}
               name="email"
-              render={({
-                field: {
-                  onChange,
-                  // onBlur,
-                  value,
-                },
-              }) => (
+              render={({ field: { onChange, value } }) => (
                 <Input
                   ref={emailInputRef}
                   autoCorrect={false}
@@ -111,7 +106,6 @@ export default function FormIn() {
                   returnKeyType="next"
                   onSubmitEditing={() => passwordInputRef.current?.focus()}
                   editable={!loading}
-                  // onBlur={onBlur}
                   onChangeText={onChange}
                   value={value}
                   error={errors.email?.message}
@@ -121,16 +115,8 @@ export default function FormIn() {
             <Controller
               control={control}
               name="phone"
-              render={({
-                field: {
-                  onChange,
-                  // onBlur,
-                  value,
-                  ref,
-                },
-              }) => (
+              render={({ field: { onChange, value } }) => (
                 <Input
-                  mask="phone"
                   ref={passwordInputRef}
                   autoCorrect={false}
                   keyboardType="numeric"
@@ -140,11 +126,10 @@ export default function FormIn() {
                   returnKeyType="send"
                   onSubmitEditing={handleSubmit(NavigateToDetail)}
                   editable={!loading}
-                  // onBlur={onBlur}
                   onChangeText={onChange}
                   value={value}
                   error={errors.phone?.message}
-                  maxLength={15}
+                  maxLength={10}
                 />
               )}
             />
