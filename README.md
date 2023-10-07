@@ -1,5 +1,6 @@
 # connectApp
-uma aplicação criada com Expo para envio de mensagens de E-mail e whatsapp para fins educativos
+uma aplicação criada com Expo para envio de mensagens de E-mail e whatsapp para fins educativos e
+upgrade de versão no react-native
 
 ## módulos
 
@@ -10,7 +11,10 @@ O app contém os seguintes módulos
 * e envia mensagens de texto para esse E-mail e o número de whatsapp
 
 ## Veja no LinkedIn 
-* [Ir para o LinkedIn](https://www.linkedin.com/posts/carlos-ferreira-4b2ba219a_aplica%C3%A7%C3%A3o-criada-em-expo-para-envio-de-mensagens-activity-6743279787747352576-_xYh)
+* [v1.0.0](https://www.linkedin.com/posts/carlos-ferreira-4b2ba219a_aplica%C3%A7%C3%A3o-criada-em-expo-para-envio-de-mensagens-activity-6743279787747352576-_xYh)
+
+* [v1.0.1](https://www.linkedin.com/posts/carlos-ferreira-4b2ba219a_faz-um-tempo-que-n%C3%A3o-apare%C3%A7o-mas-vamos-l%C3%A1-activity-7116559942987243521-nDTn?utm_source=share&utm_medium=member_android)
+
 
 ## páginas
 ### v1.0.0
