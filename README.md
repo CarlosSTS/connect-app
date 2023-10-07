@@ -14,11 +14,11 @@ O app contém os seguintes módulos
 
 ## páginas
 ### v1.0.0
-![Foto do App formulário](https://github.com/CarlosSTS/connectApp/blob/master/assets/newForm.jpeg)
+![Foto do App formulário](https://github.com/CarlosSTS/connectApp/blob/master/assets/form.png)
 ![Foto do App dashboard](https://github.com/CarlosSTS/connectApp/blob/master/assets/dashboard.png)
 
 ### v1.0.1
-![Foto do App novo formulário](https://github.com/CarlosSTS/connectApp/blob/master/assets/form.png)
+![Foto do App novo formulário](https://github.com/CarlosSTS/connectApp/blob/master/assets/newForm.jpeg)
 ![Foto do App novo dashboard](https://github.com/CarlosSTS/connectApp/blob/master/assets/newDashboard.jpeg)
 ## MOBILE
 RODANDO O PROJETO MOBILE
