@@ -27,7 +27,7 @@ const signInSchema = Yup.object({
     .email("Digite um e-mail válido"),
   phone: Yup.string()
     .required("Telefone obrigatório")
-    .min(10, "Telefone inválido"),
+    .min(11, "Telefone inválido"),
 });
 
 export default function FormIn() {
@@ -129,7 +129,7 @@ export default function FormIn() {
                   onChangeText={onChange}
                   value={value}
                   error={errors.phone?.message}
-                  maxLength={10}
+                  maxLength={11}
                 />
               )}
             />
