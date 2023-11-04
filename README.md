@@ -1,4 +1,4 @@
-# connect-app
+# Connect-app
 uma aplicação criada com Expo para envio de mensagens de E-mail e whatsapp para fins educativos e
 upgrade de versão no react-native
 
